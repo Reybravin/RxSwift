@@ -1,5 +1,4 @@
-# RxSwift
-RxSwift basics
+# RxSwift basics
 
 ```swift
 enum Event<Element>  {
