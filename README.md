@@ -78,5 +78,35 @@ Example(of: "just", "of", "them") {
    )
 }
 ```
+### .empty operator
+
+### .never operator
+
+## Disposing and terminating
+
+subscription.dispose()
+let disposeBag = DisposeBag()
+
+### .create operator.
+Defines all the events that will be emitted to subscrbers.
+
+example(of: "DisposeBag") {
+  let disposeBag = DisposeBag()
+  Observable.of("a", "b", "c")
+    .subscribe {
+    print($0)
+    }
+    .disosed(by: disposeBag)
+}
+
+example(of: "create"){
+  let disposeBag = DisposeBag()
+  Observable<String>.create { observe in
+    observe.onNext("1")
+    observer.onCompleted()
+    observer.onNext("?")
+    return Disposables.create()
+  }
+}
 
 
