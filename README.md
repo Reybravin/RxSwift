@@ -86,7 +86,7 @@ Example(of: "just", "of", "them") {
 subscription.dispose()
 let disposeBag = DisposeBag()
 
-### .create operator.
+### .create operator
 Defines all the events that will be emitted to subscrbers.
 
 example(of: "DisposeBag") {
