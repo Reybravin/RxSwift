@@ -60,6 +60,23 @@ Example(of: "just", "of", "them") {
    let two = 2
    let three = 3
    
-   let observable = Observable<Int> = Observable<Int>.just(one)
+   let observable1 = Observable<Int> = Observable<Int>.just(one)
+   let observable2 = Observable.of(one, two, three)
+   let observable3 = Observable.of([one, two, three])
+   
+   //from operator. This operator creates an observable of individual type instance from a regular array of elements. Only takes an array
+   let observable4 = Observable.from([one, two, three])
+   
+   observable1
+     .subscribe(
+   	onNext: { element in
+	  print(element)
+     },
+     	onCompleted: {
+	  print("Completed")
+	}
+   )
 }
 ```
+
+
