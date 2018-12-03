@@ -3,9 +3,9 @@ RxSwift basics
 
 ```swift
 enum Event<Element>  {
-    case next(Element)      // next element of a sequence
-    case error(Swift.Error) // sequence failed with error
-    case completed          // sequence terminated successfully
+case next(Element)      // next element of a sequence
+case error(Swift.Error) // sequence failed with error
+case completed          // sequence terminated successfully
 }
 ```
 ====
