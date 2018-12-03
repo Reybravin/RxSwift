@@ -3,9 +3,9 @@ RxSwift basics
 
 ```swift
 enum Event<Element>  {
-case next(Element)      // next element of a sequence
-case error(Swift.Error) // sequence failed with error
-case completed          // sequence terminated successfully
+   case next(Element)      // next element of a sequence
+   case error(Swift.Error) // sequence failed with error
+   case completed          // sequence terminated successfully
 }
 ```
 ====
@@ -23,26 +23,26 @@ API.download(file: "http://www...")
 ```
 ```swift
 UIDevice.rx.orientation
-	.subscribe(oNext: {current in 
-	Switch current:
-		case .landscape:
-			… re-arrange UI for landscape
-		case .portrait: 
-			… re-arrange UI for portrait
-	}
+  .subscribe(oNext: {current in 
+     switch current:
+	case .landscape:
+	  … re-arrange UI for landscape
+	case .portrait: 
+	  … re-arrange UI for portrait
+     }
 })
 ```
 ```swift
 UIDevice.rx.orientation 
-	.filter { value in
-		return value != . landscape
-	}
-	.map { _ in 
-		return "Portrait is the best!"
-	}
-	.subscribe(onNext : { string in
-		showAlert(text: string)
-	})
+  .filter { value in	
+  	return value != . landscape
+  }
+  .map { _ in 
+	return "Portrait is the best!"
+  }
+  .subscribe(onNext : { string in
+	showAlert(text: string)
+  })
 ```
 
 ## Schedulers
@@ -56,9 +56,10 @@ OperationQueueScheduler
 
 ```swift
 Example(of: "just", "of", "them") {
-let one = 1
-let two = 2
-let three = 3
-let observable = Observable<Int> = Observable<Int>.just(one)
+   let one = 1
+   let two = 2
+   let three = 3
+   
+   let observable = Observable<Int> = Observable<Int>.just(one)
 }
 ```
