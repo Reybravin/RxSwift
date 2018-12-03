@@ -1,13 +1,15 @@
 # RxSwift
 RxSwift basics
 
+```swift
 enum Event<Element>  {
     case next(Element)      // next element of a sequence
     case error(Swift.Error) // sequence failed with error
     case completed          // sequence terminated successfully
 }
-
+```
 ====
+```swift
 API.download(file: "http://www...")
 	.subscribe(onNext: { data in 
 	… append data to temp file
@@ -18,7 +20,8 @@ API.download(file: "http://www...")
 	On Completed: {
 	… use downloaded file
 	})
-	
+```
+```swift
 UIDevice.rx.orientation
 	.subscribe(oNext: {current in 
 	Switch current:
@@ -28,8 +31,8 @@ UIDevice.rx.orientation
 			… re-arrange UI for portrait
 	}
 })
-
-
+```
+```swift
 UIDevice.rx.orientation 
 	.filter { value in
 		return value != . landscape
@@ -40,8 +43,10 @@ UIDevice.rx.orientation
 	.subscribe(onNext : { string in
 		showAlert(text: string)
 	})
+```
 
 Schedulers
+
 Equivalent of dispatch queues. 
 SerialDispatchQueueScheduler
 ConcurrentDispatchQueueScheduler
