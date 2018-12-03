@@ -48,11 +48,12 @@ ConcurrentDispatchQueueScheduler
 OperationQueueScheduler
 
 Creating observables
-'''
+
+```swift
 Example(of: "just", "of", "them") {
 let one = 1
 let two = 2
 let three = 3
 let observable = Observable<Int> = Observable<Int>.just(one)
 }
-'''
+```
