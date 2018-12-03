@@ -45,14 +45,14 @@ UIDevice.rx.orientation
 	})
 ```
 
-Schedulers
+## Schedulers
 
 Equivalent of dispatch queues. 
 SerialDispatchQueueScheduler
 ConcurrentDispatchQueueScheduler
 OperationQueueScheduler
 
-Creating observables
+## Creating observables
 
 ```swift
 Example(of: "just", "of", "them") {
